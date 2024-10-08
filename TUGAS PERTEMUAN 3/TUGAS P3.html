@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Array</title>
+</head>
+<body>
+    <h1>Tugas Dasar Pemrogaman Frontend</h1>
+
+    <h2>1. Pengurutan dan Pemfilteran</h2>
+    <p>Data:</p>
+    <pre>
+const angka = [20, 10, 3, 30, 58, 42, 6, 9];
+const huruf = ['z', 'a', 'c', 'g', 'p'];
+    </pre>
+    <p>Hasil:</p>
+    <pre id="hasil1"></pre>
+
+    <h2>2. Filter Angka Genap</h2>
+    <p>Data:</p>
+    <pre>
+const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    </pre>
+    <p>Hasil:</p>
+    <pre id="hasil2"></pre>
+
+    <h2>3. Cek Genap</h2>
+    <p>Data:</p>
+    <pre>
+const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    </pre>
+    <p>Hasil:</p>
+    <pre id="hasil3"></pre>
+
+    <script>
+        const angka1 = [20, 10, 3, 30, 58, 42, 6, 9];
+        const huruf = ['z', 'a', 'c', 'g', 'p'];
+
+        const sortedAngka = angka1.sort((a, b) => a - b);
+        const sortedHuruf = huruf.sort();
+
+        document.getElementById('hasil1').textContent = `Output: ${sortedAngka}\nOutput: ${sortedHuruf}`;
+
+        const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const genap = angka2.filter(num => num % 2 === 0);
+
+        document.getElementById('hasil2').textContent = `Output: ${genap}`;
+
+        const cekGenap = angka2.map(num => num % 2 === 0);
+
+        document.getElementById('hasil3').textContent = `Output: ${cekGenap}`;
+    </script>
+</body>
+</html>
